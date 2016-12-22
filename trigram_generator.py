@@ -69,7 +69,8 @@ def generate_sentence(trigrams):
 		w1 = w2
 		w2 = w3
 	sentence = ' '.join(sentence)
-	sentence = sentence[:-2] + sentence[(-1):]
+	sentence = sentence.replace(' ,', ',')
+	sentence = sentence.replace(' .', '.')
 	return sentence
 
 if __name__=='__main__':
